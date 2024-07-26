@@ -3,7 +3,9 @@ import tiktoken
 from openai import OpenAI
 from typing import List
 
-client = OpenAI()
+client = OpenAI(
+  api_key=st.secrets["api_key"],  
+)
 
 embedding_model = "text-embedding-3-small"
 embedding_encoding = "cl100k_base"
