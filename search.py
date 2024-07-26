@@ -4,7 +4,9 @@ import numpy as np
 from typing import List
 from scipy import spatial
 
-client = OpenAI()
+client = OpenAI(
+  api_key=st.secrets["api_key"],  
+)
 
 def create_context(question, df, max_len=1800):
     """
